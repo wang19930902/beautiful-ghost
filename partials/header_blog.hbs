@@ -8,10 +8,6 @@
 <title>{{meta_title}}</title>
 {{/is}}
 
-<meta name="description" content="{{meta_description}}">
-
-<link rel="icon" type="image/png" href="{{asset "img/favicon.png"}}">
-
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="{{asset "css/bootstrap.min.css"}}">
 <link rel="stylesheet" href="{{asset "css/main.css"}}">
@@ -23,7 +19,7 @@
 <meta property="og:title" content="{{meta_title}}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{@blog.url}}{{url}}" />
-<meta property="og:image" content="{{image}}" />
+<meta property="og:image" content="{{#if feature_image}}{{image_url feature_image}}{{/if}}" />
 <meta property="og:rich_attachment" content="true" />
 
 <!-- Twitter Card tags -->
@@ -31,4 +27,4 @@
 <meta name="twitter:site" content="{{@blog.url}}{{url}}" />
 <meta name="twitter:description" content="{{meta_description}}" />
 <meta name="twitter:title" content="{{meta_title}}" />
-<meta name="twitter:image" content="{{image}}" />
+<meta name="twitter:image" content="{{#if feature_image}}{{image_url feature_image}}{{/if}}" />
